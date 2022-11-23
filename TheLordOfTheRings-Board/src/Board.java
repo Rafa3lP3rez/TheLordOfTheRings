@@ -13,11 +13,19 @@ public class Board {
     Trasgos trasgos;
 
 
-    public boolean isWinner(Personajes personajes){
-        if(bestias.getVida()> heroes.getVida()){
+    public boolean isWinner(){
+        if(HumanWinner(humanos)){
+            System.out.println("Humanos han ganado!!");
             return true;
+        }if(HobbitsWinner(hobbits) ){
+            System.out.println("Hobbits han ganado!");
+            return true;
+        }if(ElfosWinner(elfos)){
+            System.out.println("Elfos han ganado");
+            return  true;
         }
         return false;
+
     }
 
     public boolean HumanWinner(Humanos humanos) {
