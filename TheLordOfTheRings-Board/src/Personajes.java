@@ -1,6 +1,5 @@
 package src;
 
-
 public abstract class Personajes {
 
     private String name;

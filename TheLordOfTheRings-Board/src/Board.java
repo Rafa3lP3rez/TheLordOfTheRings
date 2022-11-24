@@ -29,8 +29,8 @@ public class Board {
     }
 
     public boolean HumanWinner(Humanos humanos) {
-        if (humanos.getAtaque() > trasgos.getAtaque()) {
-            if (humanos.getAtaque() > orcos.getAtaque()) {
+        if (humanos.getVida() > trasgos.getVida()) {
+            if (humanos.getVida() > orcos.getVida()) {
                 return true;
             }
         }
@@ -38,8 +38,8 @@ public class Board {
     }
 
     public boolean HobbitsWinner(Hobbits hobbits) {
-        if (hobbits.getAtaque() > trasgos.getAtaque()) {
-            if (hobbits.getAtaque() > orcos.getAtaque()) {
+        if (hobbits.getVida() > trasgos.getVida()) {
+            if (hobbits.getVida() > orcos.getVida()) {
                 return true;
             }
         }
@@ -47,15 +47,13 @@ public class Board {
     }
 
     public boolean ElfosWinner(Elfos elfos) {
-        if (elfos.getAtaque() > trasgos.getAtaque()) {
-            if (elfos.getAtaque() > orcos.getAtaque()) {
+        if (elfos.getVida() > trasgos.getVida()) {
+            if (elfos.getVida() > orcos.getVida()) {
                 return true;
             }
         }
             return false;
         }
-
-
     }
 
 
