@@ -1,10 +1,10 @@
 package src;
-
+import java.util.List;
 public class LordOfRings {
 
     private Bestias bestias;
     private Heroes heroes;
-    private Personajes personajes;
+    private List<Personajes> personajes;
     private  Board board;
 
     int option=0;
@@ -12,12 +12,12 @@ public class LordOfRings {
         System.out.println("\n************ WELCOME TO LORD OF RINGS GAME ************\n");
         option = Input.getInteger("Creando personajes\n1. Crear Heroes\n2.Crear Bestias\nIngrese su opcion: ");
         if(option==1) {
-            personajes = createElfos();
-            personajes = createHobbits();
-            personajes = createHumanos();
+            personajes.add(createElfos());
+            personajes.add(createHobbits());
+            personajes.add(createHumanos());
         } else if (option ==2) {
-            personajes = createOrcos();
-            personajes = createTrasgos();
+            personajes.add(createOrcos());
+            personajes.add(createTrasgos());
         }
       //here goes turn class
         board = new Board();
